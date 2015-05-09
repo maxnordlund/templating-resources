@@ -104,7 +104,7 @@ export class SignalBindingBehavior {
     signaler.registerBinding(binding, source, name);
     return {
       unbind: () => {
-        signaler.unregisterBinding(binding);
+        signaler.unregisterBinding(binding, source, name);
       }
     }
   }
